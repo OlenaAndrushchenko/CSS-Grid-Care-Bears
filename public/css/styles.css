@@ -1,3 +1,41 @@
+* {
+  box-sizing: border-box;
+}
 
+.main-grid {
+  display: grid;
+  max-width: 890px;
+  gap: 50px;
+  margin: 50px auto;
+}
+.main-grid .hero-grid, .main-grid .grid {
+  display: grid;
+}
+
+.hero-grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+.hero-grid .title {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 35px;
+}
+.grid :nth-child(3) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.grid :nth-child(5) {
+  grid-column: span 2;
+}
+.grid :last-child {
+  grid-column: span 3;
+}
 
 /*# sourceMappingURL=styles.css.map */
